@@ -5,8 +5,10 @@
 
 int counterNum(int* arr, int size, int keyPoint){
     if(!arr) return -101;
-    if(keyPoint< *arr) return size;
-    if(keyPoint> arr[size-1]) return 0;
+    if( keyPoint< *arr) return size;
+    if( keyPoint> arr[size-1]) return 0;
+    if( keyPoint== arr[1]) return size- 2;
+    if( keyPoint== arr[size- 3]) return 2;
 
     int count{0}, r{(size-1)};
     for( int l{0}; l< r; ++l){
@@ -15,8 +17,6 @@ int counterNum(int* arr, int size, int keyPoint){
         else r= --m;
         count= size- m;
     }
-    if( keyPoint == arr[1]) count= size- 2;
-    if( keyPoint == arr[size- 3]) count= 2;
     return count;
 }
 
