@@ -1,0 +1,15 @@
+# qtcreator generated files
+*.pro.user*
+CMakeLists.txt.user*
+
+# Vim temporary files
+.*.swp
+
+# MinGW generated files
+*.Debug
+*.Release
+
+# Binaries
+# --------
+*.dll
+*.exe
